@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 320px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #316efa, #0547b2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.logo {
+  width: 191px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fbfbfb;
+  color: #0866ff;
+  font-size: 15px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px 0;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+}
+
+.nav-button:hover {
+  background-color: #d9e6ff;
+  color: #033080;
+}
+
+.nav-button svg {
+  margin-left: 10px;
+}
+
+.main-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: 320px;
+  margin-top: 20px;
+  width: calc(100% - 320px);
+  position: relative;
+}
+
+.profile-container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+.profile-picture {
+  width: 385px;
+  height: 385px;
+  margin-left: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #1a1a1a;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.time-container {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  text-align: right;
+  font-weight: 600;
+}
+
+#time {
+  font-size: 128px;
+  font-weight: 600;
+}
+
+#date {
+  font-size: 40px;
+  margin-top: -10px;
+}
+
+.button-group {
+  position: absolute;
+  top: 350px;
+  right: 50px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.button-group .btn-start {
+  width: 130px;
+  height: 43px;
+  border-radius: 12px;
+  background-color: #316efa;
+  color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-group .btn-break {
+  width: 130px;
+  height: 43px;
+  border-radius: 12px;
+  background-color: #3e27b7;
+  color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-group .btn-end {
+  width: 130px;
+  height: 43px;
+  border-radius: 12px;
+  background-color: #f5d8d8;
+  color: #bf0f0f;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.shape-container {
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.welcome-text {
+  text-align: center;
+  font-size: 96px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.text-container {
+  text-align: center;
+}
+
+.scan-text {
+  font-size: 40px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-top: 20px;
+}
+
+.scan-icon svg {
+  width: 150px;
+  height: auto;
+  margin-top: 10px;
+}
