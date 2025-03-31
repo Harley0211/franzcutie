@@ -1,5 +1,10 @@
 <?php
-$page = isset($_GET['page']) ? $_GET['page'] : 'scan';
+$page = isset($_GET['page']) ? $_GET['page'] : 'Scan';
+
+$allowed_pages = ['Scan', 'Logbook', 'Schedules'];
+if (!in_array($page, $allowed_pages)) {
+    $page = 'Scan';
+}
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +21,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'scan';
 <body>
     <?php include 'Sidebar.php'; ?>
 
-    <div class="main-content flex-grow-1 d-flex align-items-start p-3">
+    <div class="main-content flex-grow-1 d-flex align-items-start">
         <?php include "Pages/$page.php"; ?>
     </div>
 
