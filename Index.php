@@ -31,7 +31,7 @@ if (!in_array($page, $allowed_pages)) {
             let currentPage = "<?php echo $page; ?>";
 
             buttons.forEach(button => {
-                if (button.dataset.page === currentPage) {
+                if (button.getAttribute("href").includes(currentPage)) {
                     button.classList.add('active');
                 }
 

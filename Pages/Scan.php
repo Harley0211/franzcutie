@@ -9,10 +9,164 @@
     <title>Scan</title>
 </head>
 
+<style>
+    .main-content {
+        position: absolute;
+        width: calc(100% - 260px);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        right: 0;
+        position: relative;
+        flex-grow: 1;
+        box-sizing: border-box;
+        background-color: #f5f5f5;
+        border: 1px solid #1a1a1a;
+    }
+
+    .profile-picture {
+        width: 385px;
+        height: 385px;
+        margin-left: 20px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid #1a1a1a;
+    }
+
+    .profile-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .time-container {
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        text-align: right;
+        font-weight: 600;
+    }
+
+    #time {
+        font-size: 128px;
+        font-weight: 600;
+    }
+
+    #date {
+        font-size: 40px;
+        margin-top: -10px;
+    }
+
+    .button-group {
+        position: absolute;
+        top: 350px;
+        right: 50px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .button-group .btn-start {
+        width: 130px;
+        height: 43px;
+        border-radius: 12px;
+        background-color: #316efa;
+        color: #fff;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .button-group .btn-break {
+        width: 130px;
+        height: 43px;
+        border-radius: 12px;
+        background-color: #3e27b7;
+        color: #fff;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .button-group .btn-end {
+        width: 130px;
+        height: 43px;
+        border-radius: 12px;
+        background-color: #f5d8d8;
+        color: #bf0f0f;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .shape-container {
+        width: 100%;
+        max-width: 100%;
+        height: 500px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .primary-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .text-container .welcome-text {
+        text-align: center;
+        font-size: 96px;
+        font-weight: 600;
+        color: #1a1a1a;
+    }
+
+    .primary-container .text-container {
+        text-align: center;
+    }
+
+    .text-container .scan-text {
+        font-size: 40px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-top: 20px;
+    }
+
+    .primary-container .scan-icon svg {
+        width: 150px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .primary-container .guest-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 93px;
+        height: 46px;
+        background: #fff;
+        color: #316efa;
+        border: 1px solid #c7c7c7;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+
 <body>
-    <div class="main-content d-flex flex-grow-1 align-items-start p-3">
+    <div class="main-content">
         <div class="profile-picture">
-            <img src="Assets/LOGO/DICT-logo.png" alt="Profile Picture" class="img-fluid">
+            <img src="Assets/DICT-Logo.png" alt="Profile Picture" class="img-fluid">
         </div>
         <div class="time-container">
             <div id="time"></div>
