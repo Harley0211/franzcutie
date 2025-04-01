@@ -46,7 +46,7 @@ body {
   transition: 0.3s;
 }
 
-.nav-button:hover,
+.nav .nav-button:hover,
 .nav-button:active {
   background-color: #428aff;
   color: #fff;
@@ -56,4 +56,290 @@ body {
   position: absolute;
   margin-left: -180px;
   flex-shrink: 0;
+}
+
+.main-content {
+  margin-left: 320px;
+  padding: 10px;
+  width: calc(100%-320px);
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.scan-primary-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.profile-frame {
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 5px solid #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.profile-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.clock-container {
+  text-align: right;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+
+#clock {
+  font-size: 128px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+#date {
+  font-size: 40px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.shift-buttons {
+  display: flex;
+  gap: 26px;
+  margin-top: 50px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.shift-buttons .shift-btn {
+  width: 100px;
+  height: 40px;
+  font-size: 14px;
+  align-items: center;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 5px 10px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shift-buttons .start-shift {
+  background-color: #316efa;
+  color: #fff;
+}
+
+.shift-buttons .start-shift:hover {
+  background-color: #2557d6;
+  color: white;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.shift-buttons .start-shift:active {
+  background-color: #1e47b3;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shift-buttons .break {
+  background-color: #3e27b7;
+  color: #fff;
+}
+
+.shift-buttons .break:hover {
+  background-color: #311d92;
+  color: white;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.shift-buttons .break:active {
+  background-color: #27177a;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shift-buttons .end-shift {
+  background-color: #f5d8d8;
+  color: #bb0202;
+}
+
+.shift-buttons .end-shift:hover {
+  background-color: #e8b5b5;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.shift-buttons .end-shift:active {
+  background-color: #d99999;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scan-secondary-container {
+  width: calc(100% - 360px);
+  height: 380px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  bottom: 20px;
+  left: 335px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.guest-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 93px;
+  height: 46px;
+  background: none;
+  border: 1px solid #b6b6b6;
+  border-radius: 8px;
+  color: #316efa;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 10px;
+}
+
+.guest-button:hover {
+  background: #316efa;
+  color: white;
+}
+
+.guest-button svg {
+  width: 5px;
+  height: 5px;
+}
+
+.guest-button:hover svg {
+  stroke: white;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-container h1 {
+  font-size: 76px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.welcome-container p {
+  font-size: 30px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 10px 0;
+}
+
+.welcome-container svg {
+  width: 127px;
+  height: 127px;
+  margin-top: 20px;
+}
+
+/* Logbook */
+
+/* Logbook Main Container */
+.logbook-container {
+  position: absolute;
+  top: 20px;
+  left: 300px; /* Adjust to fit behind sidebar */
+  right: 20px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: -1; /* Ensures it doesn’t overlap sidebar */
+}
+
+/* Logbook Title */
+.logbook-title {
+  font-size: 48px;
+  font-weight: 300;
+  color: #2a5ed4;
+  margin-bottom: 20px;
+}
+
+/* Search Bar & Buttons Layout */
+.logbook-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  width: 60%;
+  height: 46px;
+}
+
+.search-bar svg {
+  margin-right: 8px;
+}
+
+.search-bar input {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Buttons (Filter & Print) */
+.logbook-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: #2a5ed4;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  height: 46px;
+  transition: 0.3s;
+}
+
+.logbook-btn:hover {
+  background: #1f4cbf;
+}
+
+.logbook-btn svg {
+  stroke: white;
 }
