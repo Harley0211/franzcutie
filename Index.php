@@ -27,17 +27,16 @@ if (!in_array($page, $allowed_pages)) {
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            let buttons = document.querySelectorAll('.nav-button');
-            let currentPage = "<?php echo $page; ?>";
+            const buttons = document.querySelectorAll(".nav-button");
+            const urlParams = new URLSearchParams(window.location.search);
+            const currentPage = urlParams.get("page") || "Scan";
 
-            buttons.forEach(button => {
-                if (button.getAttribute("href").includes(currentPage)) {
-                    button.classList.add('active');
+            buttons.forEach((btn) => btn.classList.remove("active"));
+
+            buttons.forEach((btn) => {
+                if (btn.dataset.page === currentPage) {
+                    btn.classList.add("active");
                 }
-
-                button.addEventListener("click", function() {
-                    window.location.href = "Index.php?page=" + button.dataset.page;
-                });
             });
         });
     </script>
