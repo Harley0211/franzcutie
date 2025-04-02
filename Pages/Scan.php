@@ -28,6 +28,8 @@
         </div>
     </div>
 
+    <div class="guest-container"></div>
+
     <div class="scan-secondary-container">
         <div class="welcome-container">
             <button class="guest-button">
@@ -83,6 +85,15 @@
 
             </div>
 
+            <div class="scanned-container-right">
+                <div class="non-compliance-title">Pending Requirements</div>
+                <div class="non-compliance-items">
+                    <div class="non-compliance-item placeholder-item">No Birth</div>
+                    <div class="non-compliance-item placeholder-item">No ID</div>
+                    <div class="non-compliance-item placeholder-item">No TOR</div>
+                </div>
+            </div>
+
 
         </div>
 
@@ -116,6 +127,11 @@
         document.querySelector(".scan-secondary-container").addEventListener("click", function() {
             document.querySelector(".welcome-container").style.display = "none";
             document.querySelector(".scanned-container").style.display = "block";
+        });
+
+        document.querySelector(".guest-button").addEventListener("click", function() {
+            let guestContainer = document.querySelector(".guest-container");
+            guestContainer.style.display = guestContainer.style.display === "block" ? "none" : "block";
         });
     </script>
 
