@@ -93,10 +93,7 @@
                     <div class="non-compliance-item placeholder-item">No TOR</div>
                 </div>
             </div>
-
-
         </div>
-
     </div>
 
 
